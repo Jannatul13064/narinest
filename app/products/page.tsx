@@ -1,7 +1,7 @@
-import Slider from "@/components/Slider";
-import ProductsList, { Product } from "@/components/ProductsList";
+import React from "react";
+import ProductsList from "@/components/ProductsList";
 
-const products: Product[] = [
+const productData = [
   {
     id: 1,
     name: "Elegant Bra Set",
@@ -60,29 +60,11 @@ const products: Product[] = [
   },
 ];
 
-export default function Home() {
+export default function ProductsPage() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen">
-      <section className="w-full max-w-7xl px-6 pt-35">
-        <Slider />
-      </section>
-
-      <section className="text-center py-12 px-6">
-        <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-          Welcome to NariNest
-        </h1>
-        <p className="max-w-2xl mx-auto text-white text-lg md:text-xl">
-          Premium and comfortable innerwear for Bangladeshi women. Find bras,
-          panties, nightwear, and bikini sets crafted for confidence and style.
-        </p>
-      </section>
-
-      <section className="w-full max-w-7xl px-6 pb-12">
-        <h2 className="text-3xl font-semibold text-rose-600 mb-8 text-center">
-          Our Products
-        </h2>
-        <ProductsList products={products} />
-      </section>
-    </div>
+    <main className="max-w-6xl mx-auto px-6 py-12 pt-32">
+      <h1 className="text-3xl font-bold text-rose-600 mb-8">Our Products</h1>
+      <ProductsList products={productData} /> {/* ✅ Pass the prop here */}
+    </main>
   );
 }
