@@ -14,6 +14,8 @@ export default function Header() {
     { href: "/products", label: "Shop" },
     { href: "/about", label: "About" },
     { href: "/contact", label: "Contact" },
+    { href: "/admin/dashboard", label: "Super Admin" },
+    { href: "/userDashboard", label: "User Dashboard" },
   ];
 
   const handleLogout = () => {
